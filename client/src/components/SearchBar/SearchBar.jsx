@@ -5,7 +5,7 @@ import { getPokemonByName } from "../../redux/actions";
 const SearchBar = () => {
   const dispatch = useDispatch();
 
-  const [name, setName] = useState(false);
+  const [name, setName] = useState();
 
   function handleSubmit(e) {
  

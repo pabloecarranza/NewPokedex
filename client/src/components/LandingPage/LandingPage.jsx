@@ -6,7 +6,7 @@ function LandingPage() {
   return (
     <>
       <div className={Styles.LandingPage}>
-        <h4>Welcome Wolox Challenge</h4>
+        <h4>Welcome</h4>
 
         <Link to="/home">
           <button className={Styles.myButton}>Enter</button>

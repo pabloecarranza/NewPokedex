@@ -37,7 +37,7 @@ function HomePage() {
   return (
     <div>
       <div className={Styles.navbar}>
-        <h1>Pokedex Wolox</h1>
+        <h1>Pokedex</h1>
         <SearchBar />
         <div className={Styles.counter}>
           <h3>Cantidad por pagina</h3>

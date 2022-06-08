@@ -5,10 +5,9 @@ const axios = require("axios");
 router.get("/", async (req, res) => {
   let pokemon = {};
   let name = req.query.name;
-try {
-  if (name) {
-
+  try {
     const urlName = await axios.get(
+      //"https://pokeapi.co/api/v2/pokemon-form/" + name
       "https://pokeapi.co/api/v2/pokemon/" + name
     );
 
@@ -25,12 +24,10 @@ try {
     };
     let types = urlName.data.types.map((el) => el.type.name);
     pokemon = { ...pokemon, types: types };
-    return res.json(pokemon);
+    return res.status(200).send(pokemon);
+  } catch (error) {
+    res.status(404).send("Pokemon dont exists");
   }
-} catch (error) {
-  res.status(404).send("Pokemon dont exists");
-}
-  
 });
 
 module.exports = router;

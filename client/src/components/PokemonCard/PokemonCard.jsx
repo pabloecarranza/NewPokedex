@@ -1,6 +1,5 @@
 import React from "react";
 import Styles from "./PokemonCard.module.css";
-import { Link } from "react-router-dom";
 
 function PokemonCard({ attack, defense, id, img, name, types }) {
   const newD = types
@@ -12,9 +11,8 @@ function PokemonCard({ attack, defense, id, img, name, types }) {
   return (
     <>
       <div className={Styles.card}>
-        <Link to={"/recipe/" + id}>
-          <h1>{name}</h1>
-        </Link>
+        <h1>{name}</h1>
+
         <h1>Attack {attack}</h1>
         <h1> Defense {defense}</h1>
         <img src={img} alt="" />

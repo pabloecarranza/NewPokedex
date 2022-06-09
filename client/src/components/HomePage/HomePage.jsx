@@ -43,7 +43,7 @@ function HomePage() {
           <h3>Cantidad por pagina</h3>
 
           <select onChange={(e) => handleShow(e)}>
-            <option value="none">20</option>
+            <option value="none">Select</option>
             <option value="5">5</option>
             <option value="10">10</option>
             <option value="20">20</option>
